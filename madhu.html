@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhu Fabricators</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.content-section').forEach(function (el) {
+                el.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+
+        window.onload = function() {
+            showSection('home');
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="logo2.jpg" alt="Madhu Fabricators Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="showSection('home')">Home</a></li>
+                    <li><a href="javascript:void(0);" onclick="showSection('about')">About Us</a></li>
+                    <li><a href="javascript:void(0);" onclick="showSection('services')">Services</a></li>
+                    <li><a href="javascript:void(0);" onclick="showSection('contact')">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="content-section">
+            <div class="hero">
+                <h1>Build a Stronger Product</h1>
+                <p>Welcome to Madhu Fabricators, a pioneering name in the field of manufacturing Steel, Metal & Wooden Furniture.</p>
+                <a href="javascript:void(0);" onclick="showSection('contact')" class="cta-button">Contact Us</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section" style="display: none;">
+            <h2>About Us</h2>
+            <p>We have 38+ years of experience, providing high-quality steel, metal, and wooden furniture with precision craftsmanship.</p>
+            <div class="image-grid">
+                <img src="IMG_20190405_121153.jpg" alt="Work Sample 1">
+                <img src="IMG_20191021_134958.jpg" alt="Work Sample 2">
+                <img src='IMG_20200105_160103.jpg' alt="Work Sample 3">
+                <img src='IMG_1742.JPG' alt="Work Sample 4">
+                <img src="IMG_20200105_160113.jpg" alt="Work Sample 5">
+                <img src="IMG_20220709_160707.jpg" alt="Work Sample 6">
+            </div>
+        </section>
+
+        <section id="services" class="content-section" style="display: none;">
+            <h2>Our Services</h2>
+            <ul>
+                <li>MS / SS / Steel Furniture</li>
+                <img class="s1" src="fab2.jpg" alt="service 1" width="200px" height="200px">
+                <li>Electric & Electronics Panel Boards</li>
+                <li>Parking Sheds, Generator House</li>
+                <li>Sheet Metal Fabrication Work</li>
+                <li>Elevator Parts and Cabins</li>
+                <li>Machinery Body Manufacturing</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="content-section" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Plot No.1-b, Nr. Arvind Forest, Vill - Karoli, Ta – Kalol, Dist- Gandhinagar - 382721</p>
+            <p>Fulchand Panchal (Official): +919099963821</p>
+            <p>Email: <a href="mailto:madhufabricators91@gmail.com">madhufabricators91@gmail.com</a></p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" autocomplete="off" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Madhu Fabricators. All rights reserved.</p>
+    </footer>
+</body>
+</html>
